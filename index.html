@@ -5,7 +5,6 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Project Delivery - Case Studies</title>
-
 <style>
   :root {
     --bg: #f5f7fb;
@@ -17,15 +16,11 @@
     --brand: #233b63;
     --accent: #244a86;
   }
-
   * { box-sizing: border-box; }
 
-  /* =========================
-     BACKGROUND (CORRECT)
-  ========================= */
+  /* ONLY CHANGE IS HERE */
   body {
     margin: 0;
-
     background-image: url("/background.png");
     background-size: cover;
     background-position: center;
@@ -36,68 +31,30 @@
     color: var(--ink);
   }
 
-  /* CRITICAL: overlay BEHIND content */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(10, 30, 60, 0.55);
-    z-index: -1;
-  }
-
-  /* =========================
-     HEADER
-  ========================= */
   header { padding: 28px 22px 8px; }
-
-  h1 {
-    margin: 0 0 12px;
-    font-weight: 800;
-    letter-spacing: .2px;
-    color: #ffffff;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
-  }
-
+  h1 { margin: 0 0 12px; font-weight: 800; letter-spacing: .2px; }
   main { padding: 12px 22px 12px; }
 
-  /* =========================
-     GRID (UNCHANGED)
-  ========================= */
-  .grid {
-    display: grid;
-    gap: 18px;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
+  .grid { display: grid; gap: 18px; grid-template-columns: repeat(5, minmax(0, 1fr)); }
   @media (max-width: 1280px) { .grid { grid-template-columns: repeat(4, 1fr); } }
   @media (max-width: 980px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 720px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px)  { .grid { grid-template-columns: 1fr; } }
 
-  /* =========================
-     TILE (MINIMAL CHANGE)
-  ========================= */
   .tile {
-    background: rgba(255,255,255,0.92); /* only change */
+    background: var(--tile-bg);
     border: 1px solid var(--tile-border);
     border-radius: 16px;
     box-shadow: var(--tile-shadow);
-
-    text-decoration: none;
-    color: inherit;
-
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    text-decoration: none; color: inherit;
+    height: 150px; display: flex; align-items: center; justify-content: center;
     transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
   }
 
   .tile:hover {
     transform: translateY(-2px);
     border-color: #d1d5db;
-    box-shadow: 0 16px 26px rgba(0,0,0,.12);
+    box-shadow: 0 16px 26px rgba(0,0,0,.08);
   }
 
   .tile-inner { text-align: center; }
@@ -114,15 +71,10 @@
     font-size: 20px;
     font-weight: 800;
     color: #244a86;
+    letter-spacing: .3px;
   }
 
-  /* =========================
-     FOOTER (READABLE)
-  ========================= */
-  footer {
-    padding: 12px 22px 28px;
-    color: #ffffff;
-  }
+  footer { padding: 12px 22px 28px; }
 
   .bottom {
     display: grid;
@@ -145,13 +97,10 @@
   }
 
   .btn.secondary {
-    background: rgba(255,255,255,0.2);
-    color: #ffffff;
+    background: #0f274215;
+    color: #0f2742;
   }
 
-  /* =========================
-     FILTERS (READABLE)
-  ========================= */
   .tabs {
     display: flex;
     gap: 10px;
@@ -160,7 +109,7 @@
   }
 
   .tab {
-    background: rgba(255,255,255,0.85);
+    background: #e6ebf5;
     color: #0f2742;
     padding: 8px 12px;
     border-radius: 12px;
@@ -170,8 +119,8 @@
   }
 
   .tab.active {
-    background: #244a86;
-    color: #fff;
+    background: #21a3661a;
+    outline: 2px solid #21a366;
   }
 
   .chips {
@@ -183,18 +132,18 @@
   }
 
   .chip {
-    background: rgba(255,255,255,0.85);
+    background: #eef2f7;
     color: #0f2742;
     padding: 6px 10px;
     border-radius: 999px;
-    border: none;
+    border: 1px solid #e2e8f0;
     font-weight: 600;
     cursor: pointer;
   }
 
   .chip[aria-pressed="true"] {
-    background: #244a86;
-    color: #fff;
+    outline: 2px solid #21a366;
+    background: #21a3661a;
   }
 
   .chip.disabled {
@@ -207,5 +156,4 @@
 
 </style>
 </head>
-
 <body>
