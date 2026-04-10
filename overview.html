@@ -15,7 +15,7 @@
 * { box-sizing: border-box; }
 
 /* =========================
-   SYSTEM BACKGROUND
+   BACKGROUND
 ========================= */
 body {
   margin: 0;
@@ -26,14 +26,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  color: var(--ink);
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
                Roboto, "Helvetica Neue", Arial;
   line-height: 1.6;
 }
 
 /* =========================
-   HEADER (WHITE TEXT FIX)
+   HEADER (WHITE TEXT)
 ========================= */
 header {
   padding: 48px 22px 24px;
@@ -46,7 +45,6 @@ header h1 {
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: .2px;
-
   color: #ffffff;
 }
 
@@ -54,7 +52,7 @@ header p {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* subtle readability boost */
+/* readability boost */
 header h1,
 header p {
   text-shadow: 0 2px 12px rgba(0,0,0,0.4);
@@ -71,8 +69,14 @@ h2 {
 
 p { margin: 0.75rem 0; }
 
-.muted { color: var(--muted); }
+/* ⚠️ PANEL TEXT ONLY */
+.panel {
+  color: var(--ink);
+}
 
+/* =========================
+   MAIN
+========================= */
 main {
   max-width: 960px;
   margin: 0 auto;
@@ -80,7 +84,7 @@ main {
 }
 
 /* =========================
-   FLOATING PANELS
+   PANELS (UNCHANGED)
 ========================= */
 .panel {
   background: rgba(255,255,255,0.88);
@@ -115,7 +119,7 @@ main {
 }
 
 /* =========================
-   FOOTER
+   FOOTER (FIXED)
 ========================= */
 footer {
   max-width: 960px;
@@ -125,6 +129,9 @@ footer {
   grid-template-columns: 1fr auto;
   gap: 16px;
   align-items: center;
+
+  /* THIS WAS MISSING */
+  color: rgba(255,255,255,0.75);
 }
 
 .btn {
@@ -137,8 +144,8 @@ footer {
 }
 
 .btn.secondary {
-  background: rgba(15,39,66,0.15);
-  color: var(--ink);
+  background: rgba(255,255,255,0.2);
+  color: #ffffff;
 }
 
 @media (max-width: 640px) {
@@ -202,9 +209,6 @@ footer {
       <li>Capabilities delivered</li>
       <li>Results, return, and yield</li>
     </ul>
-    <p class="muted">
-      The intent is not comparison — but pattern recognition.
-    </p>
   </section>
 
   <section class="panel">
@@ -227,7 +231,7 @@ footer {
     <a class="btn" href="./index.html">Browse Case Studies</a>
     <a class="btn secondary" href="mailto:wayne.kirk.schmidt@gmail.com">Contact</a>
   </div>
-  <div class="muted">© ChangeIS</div>
+  <div>© ChangeIS</div>
 </footer>
 
 </body>
