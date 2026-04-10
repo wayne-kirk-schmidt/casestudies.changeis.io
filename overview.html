@@ -20,7 +20,7 @@
 body {
   margin: 0;
 
-  background-image: url("/background.png"); /* SAME AS CS01 */
+  background-image: url("/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@ body {
 }
 
 /* =========================
-   LAYOUT (UNCHANGED)
+   HEADER (WHITE TEXT FIX)
 ========================= */
 header {
   padding: 48px 22px 24px;
@@ -41,13 +41,28 @@ header {
   margin: 0 auto;
 }
 
-h1 {
+header h1 {
   margin: 0 0 12px;
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: .2px;
+
+  color: #ffffff;
 }
 
+header p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* subtle readability boost */
+header h1,
+header p {
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   LAYOUT
+========================= */
 h2 {
   margin-top: 2.2rem;
   font-size: 1.35rem;
@@ -65,7 +80,7 @@ main {
 }
 
 /* =========================
-   FLOATING PANELS (KEY CHANGE)
+   FLOATING PANELS
 ========================= */
 .panel {
   background: rgba(255,255,255,0.88);
@@ -78,7 +93,7 @@ main {
 }
 
 /* =========================
-   STARRY (SLIGHT UPGRADE)
+   STARRY
 ========================= */
 .starry {
   display: grid;
@@ -139,7 +154,7 @@ footer {
 
 <header>
   <h1>ChangeIS — Project Delivery Case Studies</h1>
-  <p class="muted">
+  <p>
     A practical record of how complex systems were improved, stabilized,
     or rebuilt — using disciplined engineering, clear trade-offs,
     and measurable outcomes.
@@ -169,30 +184,12 @@ footer {
     </p>
 
     <div class="starry">
-      <div>
-        <div class="letter">S</div>
-        <div><strong>Situation</strong> — the operational or business context.</div>
-      </div>
-      <div>
-        <div class="letter">T</div>
-        <div><strong>Task</strong> — what needed to be achieved (and what could not change).</div>
-      </div>
-      <div>
-        <div class="letter">A</div>
-        <div><strong>Action</strong> — the concrete steps taken, including architecture and process.</div>
-      </div>
-      <div>
-        <div class="letter">R</div>
-        <div><strong>Result</strong> — measurable outcomes (latency, cost, risk, reliability).</div>
-      </div>
-      <div>
-        <div class="letter">R</div>
-        <div><strong>Return</strong> — financial or operational impact where quantifiable.</div>
-      </div>
-      <div>
-        <div class="letter">Y</div>
-        <div><strong>Yield</strong> — long-term leverage: capability, confidence, or optionality gained.</div>
-      </div>
+      <div><div class="letter">S</div><div><strong>Situation</strong> — the operational or business context.</div></div>
+      <div><div class="letter">T</div><div><strong>Task</strong> — what needed to be achieved (and what could not change).</div></div>
+      <div><div class="letter">A</div><div><strong>Action</strong> — the concrete steps taken, including architecture and process.</div></div>
+      <div><div class="letter">R</div><div><strong>Result</strong> — measurable outcomes (latency, cost, risk, reliability).</div></div>
+      <div><div class="letter">R</div><div><strong>Return</strong> — financial or operational impact where quantifiable.</div></div>
+      <div><div class="letter">Y</div><div><strong>Yield</strong> — long-term leverage: capability, confidence, or optionality gained.</div></div>
     </div>
   </section>
 
