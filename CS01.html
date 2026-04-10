@@ -7,24 +7,18 @@
 
 <style>
 /* =========================
-   BASE
+   BODY — REAL BACKGROUND
 ========================= */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
 
-  /* BLUE SYSTEM BACKGROUND */
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(10, 30, 60, 0.92),
-      rgba(10, 30, 60, 0.85)
-    ),
-    url("background.png"); /* <-- update path if needed */
-
+  /* YOUR ACTUAL BACKGROUND IMAGE */
+  background-image: url("./background.png"); /* <-- FIX PATH IF NEEDED */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 
   color: #0f2742;
@@ -36,18 +30,17 @@ body {
 .carousel-container {
   max-width: 960px;
   margin: 3rem auto;
-  position: relative;
   padding: 0 16px 40px;
 }
 
 /* =========================
-   CARD
+   CARD (NOW FLOATS)
 ========================= */
 .carousel-slide {
   display: none;
 
-  /* GLASS PANEL */
-  background: rgba(255, 255, 255, 0.94);
+  /* Let background show through */
+  background: rgba(255, 255, 255, 0.92);
 
   border-radius: 14px;
   padding: 2rem;
@@ -56,7 +49,7 @@ body {
 
   box-shadow: 0 25px 60px rgba(0,0,0,0.35);
 
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
 }
 
 .carousel-slide.active {
@@ -78,7 +71,7 @@ th, td {
   border-bottom: 1px solid #e0e0e0;
 }
 
-/* LEFT LABEL COLUMN */
+/* LEFT COLUMN */
 th {
   width: 20%;
   background-color: rgba(20, 40, 80, 0.08);
@@ -91,7 +84,7 @@ th span {
 }
 
 /* =========================
-   TEXT + LISTS
+   LISTS
 ========================= */
 ul {
   margin-top: 0.5rem;
@@ -99,7 +92,7 @@ ul {
 }
 
 /* =========================
-   NAV BUTTONS
+   BUTTONS
 ========================= */
 .carousel-nav {
   text-align: center;
