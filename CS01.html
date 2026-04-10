@@ -7,15 +7,15 @@
 
 <style>
 /* =========================
-   BODY — REAL BACKGROUND
+   BODY — REAL BACKGROUND (NO OVERLAY)
 ========================= */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
 
-  /* YOUR ACTUAL BACKGROUND IMAGE */
-  background-image: url("./background.png"); /* <-- FIX PATH IF NEEDED */
+  /* USE YOUR REAL IMAGE */
+  background-image: url("/background.png"); /* <-- adjust path if needed */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,27 +29,28 @@ body {
 ========================= */
 .carousel-container {
   max-width: 960px;
-  margin: 3rem auto;
+  margin: 4rem auto;
   padding: 0 16px 40px;
 }
 
 /* =========================
-   CARD (NOW FLOATS)
+   CARD — LET BACKGROUND SHOW
 ========================= */
 .carousel-slide {
   display: none;
 
-  /* Let background show through */
-  background: rgba(255, 255, 255, 0.92);
+  /* LESS OPAQUE → background visible */
+  background: rgba(255, 255, 255, 0.85);
 
   border-radius: 14px;
   padding: 2rem;
 
   border-left: 6px solid #244a86;
 
-  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+  /* stronger shadow for contrast */
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
 
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(3px);
 }
 
 .carousel-slide.active {
@@ -74,7 +75,7 @@ th, td {
 /* LEFT COLUMN */
 th {
   width: 20%;
-  background-color: rgba(20, 40, 80, 0.08);
+  background-color: rgba(36, 74, 134, 0.08);
   color: #244a86;
 }
 
@@ -129,7 +130,7 @@ ul {
 }
 
 /* =========================
-   STARRY LETTER FIX
+   STARRY LETTER
 ========================= */
 .starry-header .first-letter {
   font-weight: bold !important;
