@@ -1,116 +1,194 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>
-   Guru Suite Case Study Carousel
-  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Case Study — NXT RAW</title>
+
 <style>
-   body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-    }
-    .carousel-container {
-      max-width: 960px;
-      margin: 2rem auto;
-      position: relative;
-    }
-    .carousel-slide {
-      display: none;
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-left: 6px solid #1e3c72;
-    }
-    .carousel-slide.active {
-      display: block;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      text-align: left;
-      vertical-align: top;
-      padding: 1rem;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    th {
-      width: 20%;
-      background-color: #f0f3f9;
-      color: #1e3c72;
-    }
-    th span {
-      font-weight: bold;
-      font-size: 1.25rem;
-    }
-    ul {
-      margin-top: 0.5rem;
-      padding-left: 1.25rem;
-    }
-    .carousel-nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .carousel-nav button {
-      background-color: #1e3c72;
-      color: white;
-      padding: 0.6rem 1rem;
-      border: none;
-      margin: 0 0.5rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .view-all {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .view-all a {
-      color: #1e3c72;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-<style>
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background-image: url("/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #0f2742;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.carousel-container {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 16px 40px;
+}
+
+/* =========================
+   CARD (STATIC)
+========================= */
+.carousel-slide {
+  display: block;
+
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+  padding: 2rem;
+
+  border-left: 6px solid #244a86;
+
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+  backdrop-filter: blur(3px);
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* =========================
+   STARRY STRUCTURE
+========================= */
+th {
+  width: 22%;
+  background: rgba(36, 74, 134, 0.12);
+  border-right: 2px solid rgba(36, 74, 134, 0.25);
+  color: #244a86;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.starry-header {
+  font-size: 0.85rem;
+}
+
 .starry-header .first-letter {
-  font-weight: bold !important;
-  font-size: 1.2em !important;
-  color: #000 !important;
-  display: inline-block !important;
-  margin-right: 0.05em !important;
+  font-size: 1.4em;
+  font-weight: 900;
+  color: #0f2742;
+  margin-right: 4px;
+}
+
+/* =========================
+   OVERVIEW BUTTON
+========================= */
+.overview-only {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.overview-only a {
+  display: inline-block;
+  background: #0f2742;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 720px) {
+  .carousel-slide {
+    padding: 1.2rem;
+  }
+
+  th, td {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    border-bottom: none;
+    padding-bottom: 0.3rem;
+  }
+
+  td {
+    padding-top: 0.3rem;
+  }
 }
 </style>
 </head>
+
 <body>
+
 <div class="carousel-container">
-<div class="carousel-slide active">
-<table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td><p class="p2"><span class="s2">A global financial institution faced competitive pressure to deliver market data faster for electronic trading. Existing systems had plateaued, creating a barrier to client acquisition and trading performance.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td><p class="p2"><span class="s2">Design an ultra-low latency market data delivery system, capable of global distribution, exceptional speed, and regulatory compliance. Expand client opportunities by offering a differentiated premium data service.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td><p class="p2"><span class="s2">Developed and deployed an ultra-low latency delivery platform, achieving under <b>¼ microsecond </b>system-to-system transmission. Optimized networking, memory, and hardware layers. Filed and received a patent for the core transmission innovations, as part of a broader suite of patents advancing next-generation financial processing platforms.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td><p class="p2"><span class="s2">Launched the fastest market data service in the firm's portfolio. Generated an estimated <b>$26 </b>million in new annual revenue through premium client offerings.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td><p class="p2"><span class="s2">Delivered in under <b>8 </b>months with a lean team. Reduced operational costs through hardware optimization and system efficiency. Became the technical foundation for future ultra-low latency initiatives.</span></p></td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td><p class="p2"><span class="s2">Positioned the firm as a leader in low-latency technology. Catalyzed a culture shift toward innovation through small, high-impact teams. Established groundwork for a broader patent portfolio supporting next-generation financial infrastructures.</span></p></td></tr></table>
+
+<div class="carousel-slide">
+
+<table>
+
+<tr>
+<th class="starry-header"><span class="first-letter">S</span>ituation</th>
+<td>
+A global financial institution faced competitive pressure to deliver market data faster for electronic trading. Existing systems had plateaued, creating a barrier to client acquisition and trading performance.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">T</span>ask</th>
+<td>
+Design an ultra-low latency market data delivery system, capable of global distribution, exceptional speed, and regulatory compliance. Expand client opportunities by offering a differentiated premium data service.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">A</span>ction</th>
+<td>
+Developed and deployed an ultra-low latency delivery platform, achieving under <strong>¼ microsecond</strong> system-to-system transmission. Optimized networking, memory, and hardware layers. Filed and received a patent for the core transmission innovations.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">R</span>esult</th>
+<td>
+Launched the fastest market data service in the firm's portfolio. Generated an estimated <strong>$26M annually</strong> through premium client offerings.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">R</span>eturn</th>
+<td>
+Delivered in under <strong>8 months</strong> with a lean team. Reduced operational costs and became the foundation for future ultra-low latency initiatives.
+</td>
+</tr>
+
+<tr>
+<th class="starry-header"><span class="first-letter">Y</span>ield</th>
+<td>
+Positioned the firm as a leader in low-latency technology and established groundwork for a broader patent portfolio supporting next-generation financial systems.
+</td>
+</tr>
+
+</table>
+
 </div>
-<!-- Future slides go here -->
-<div class="overview-only" style="text-align:center; margin-top: 1.5rem;"><a href="index.html" style="display:inline-block;background:#0f2742;color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;">Overview</a></div></div>
-<script>
-   let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
 
-    function showSlide(index) {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (index + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
+<div class="overview-only">
+<a href="index.html">Overview</a>
+</div>
 
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
+</div>
 
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
-  </script>
 </body>
 </html>
