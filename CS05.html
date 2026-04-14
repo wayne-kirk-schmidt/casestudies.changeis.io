@@ -1,83 +1,85 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>
-   Guru Suite Case Study Carousel
-  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Case Study — CI/CD Transformation</title>
+
 <style>
-   body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-    }
-    .carousel-container {
-      max-width: 960px;
-      margin: 2rem auto;
-      position: relative;
-    }
-    .carousel-slide {
-      display: none;
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-left: 6px solid #1e3c72;
-    }
-    .carousel-slide.active {
-      display: block;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      text-align: left;
-      vertical-align: top;
-      padding: 1rem;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    th {
-      width: 20%;
-      background-color: #f0f3f9;
-      color: #1e3c72;
-    }
-    th span {
-      font-weight: bold;
-      font-size: 1.25rem;
-    }
-    ul {
-      margin-top: 0.5rem;
-      padding-left: 1.25rem;
-    }
-    .carousel-nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .carousel-nav button {
-      background-color: #1e3c72;
-      color: white;
-      padding: 0.6rem 1rem;
-      border: none;
-      margin: 0 0.5rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .view-all {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .view-all a {
-      color: #1e3c72;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-<style>
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background-image: url("/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #0f2742;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 16px 40px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  display: block;
+
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+  padding: 2rem;
+
+  border-left: 6px solid #244a86;
+
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+  backdrop-filter: blur(3px);
+}
+
+/* =========================
+   TABLE
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* =========================
+   STARRY STRUCTURE
+========================= */
+th {
+  width: 22%;
+  background: rgba(36, 74, 134, 0.12);
+  border-right: 2px solid rgba(36, 74, 134, 0.25);
+  color: #244a86;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.starry-header {
+  font-size: 0.85rem;
+}
+
 .starry-header .first-letter {
   font-weight: bold !important;
   font-size: 1.2em !important;
@@ -85,43 +87,96 @@
   display: inline-block !important;
   margin-right: 0.05em !important;
 }
+
+/* =========================
+   LISTS
+========================= */
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer a {
+  display: inline-block;
+  background: #0f2742;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 720px) {
+  .card {
+    padding: 1.2rem;
+  }
+
+  th, td {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    border-bottom: none;
+    padding-bottom: 0.3rem;
+  }
+
+  td {
+    padding-top: 0.3rem;
+  }
+}
 </style>
 </head>
+
 <body>
-<div class="carousel-container">
-<div class="carousel-slide active">
-<table><tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td>A mid-sized fintech company was experiencing bottlenecks in their CI/CD pipeline. 
+
+<div class="container">
+
+<div class="card">
+
+<table>
+<tr><th class="starry-header"><span class="first-letter">S</span>ituation</th><td>A mid-sized fintech company was experiencing bottlenecks in their CI/CD pipeline. 
 Build times had grown to over <strong>4 hours</strong>, and deployments frequently failed 
-due to inconsistent environments and manual QA steps.</td></tr><tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td>The goal was to streamline the CI/CD process to achieve <strong>sub-15-minute</strong> builds, 
+due to inconsistent environments and manual QA steps.</td></tr>
+
+<tr><th class="starry-header"><span class="first-letter">T</span>ask</th><td>The goal was to streamline the CI/CD process to achieve <strong>sub-15-minute</strong> builds, 
 improve deployment success to excess of <strong>95%</strong>, reducing reliance on manual QA 
-by automating at least <strong>80%</strong> of regression tests.</td></tr><tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td>We implemented a containerized build system using Docker and introduced parallelized 
+by automating at least <strong>80%</strong> of regression tests.</td></tr>
+
+<tr><th class="starry-header"><span class="first-letter">A</span>ction</th><td>We implemented a containerized build system using Docker and introduced parallelized 
 workflows in GitHub Actions. Test coverage reports were integrated directly into pull requests. 
 Deployment testing ranged from backend to frontend, based on the code committed. 
-By building QA and Ready for Business tests together, we streamlined the ability to report on health.</td></tr><tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td>Build times dropped to an average of <strong>11 minutes</strong>. 
+By building QA and Ready for Business tests together, we streamlined the ability to report on health.</td></tr>
+
+<tr><th class="starry-header"><span class="first-letter">R</span>esult</th><td>Build times dropped to an average of <strong>11 minutes</strong>. 
 Deployment failures were reduced significantly, and deployment success was raised to <strong>98%</strong>, 
-and a full <strong>93%</strong> of regression test coverage was achieved through automation.</td></tr><tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td>The team recouped over <strong>55 engineering hours per week</strong>, enabling more focus on feature development. 
-Releases shifted from biweekly to weekly, allowing faster time-to-market.</td></tr><tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td>This engagement demonstrated how tactical DevOps enhancements can yield rapid, measurable returns. 
-The company now uses the new workflow as a standard across all engineering teams.</td></tr></table>
+and a full <strong>93%</strong> of regression test coverage was achieved through automation.</td></tr>
+
+<tr><th class="starry-header"><span class="first-letter">R</span>eturn</th><td>The team recouped over <strong>55 engineering hours per week</strong>, enabling more focus on feature development. 
+Releases shifted from biweekly to weekly, allowing faster time-to-market.</td></tr>
+
+<tr><th class="starry-header"><span class="first-letter">Y</span>ield</th><td>This engagement demonstrated how tactical DevOps enhancements can yield rapid, measurable returns. 
+The company now uses the new workflow as a standard across all engineering teams.</td></tr>
+</table>
+
 </div>
-<!-- Future slides go here -->
-<div class="overview-only" style="text-align:center; margin-top: 1.5rem;"><a href="index.html" style="display:inline-block;background:#0f2742;color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;">Overview</a></div></div>
-<script>
-   let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
 
-    function showSlide(index) {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (index + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
+<div class="footer">
+<a href="index.html">Overview</a>
+</div>
 
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
+</div>
 
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
-  </script>
 </body>
 </html>
