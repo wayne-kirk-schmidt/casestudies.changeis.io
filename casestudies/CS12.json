@@ -1,0 +1,16 @@
+{
+  "id": "CS12",
+  "name": "FLEET",
+  "tagline": "Distributed software management across 1,000+ remote endpoints",
+  "location": ["US"],
+  "industry": ["Office and Document Solutions"],
+  "discipline": ["Infrastructure", "Automation", "Platform"],
+  "starry": {
+    "situation": "A distributed enterprise needed reliable deployment and management for a large fleet of remote laptops over low-bandwidth connections.",
+    "task": "Build a Tivoli-based platform to manage approximately 6,000 laptops with software caching, rollback, and state comparison — resilient to poor connectivity.",
+    "action": "Architected distributed software caches and staged updates to minimize bandwidth usage. Implemented rollback and state comparison to ensure predictable outcomes and fast recovery. Automated inventory and compliance checks to keep remote endpoints in policy. Scheduled maintenance windows and delta updates to respect modem-speed links.",
+    "result": "Enabled reliable management of approximately 6,000 laptops across remote regions. Reduced failed deployments and desk-side interventions. Stabilized update cycles despite constrained links.",
+    "return": "Significant savings from fewer truck-rolls and reduced rework. Improved compliance posture and endpoint reliability across the fleet.",
+    "yield": "Demonstrated a manage-anywhere approach to endpoint operations that prefigured modern edge and over-the-air management practices."
+  }
+}

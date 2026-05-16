@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Case Study · ChangeIS</title>
+<link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<div class="cs-container" id="cs-container">
+  <div class="loading">Loading case study...</div>
+</div>
+
+<script>
+const STARRY = ['situation','task','action','result','return','yield'];
+const LABELS  = ['Situation','Task','Action','Result','Return','Yield'];
+
+async function boot() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  if (!id) { renderError('No case study ID specified.'); return; }
+
+  // Load manifest to know prev/next
+  const [cs, manifest] = await Promise.all([
+    fetch(`./casestudies/${id}.json`).then(r => r.json()),
+    fetch('./manifest.json').then(r => r.json())
+  ]);
+
+  document.title = `${cs.name} · ChangeIS Case Study`;
+
+  const idx = manifest.indexOf(id);
+  const prevId = idx > 0 ? manifest[idx - 1] : manifest[manifest.length - 1];
+  const nextId = idx < manifest.length - 1 ? manifest[idx + 1] : manifest[0];
+
+  renderCase(cs, prevId, nextId);
+}
+
+function renderCase(cs, prevId, nextId) {
+  const allTags = [...(cs.location||[]), ...(cs.industry||[]), ...(cs.discipline||[])];
+  const metaTags = allTags.map(t => `<span class="cs-meta-tag">${t}</span>`).join('');
+
+  const rows = STARRY.map((key, i) => {
+    const content = cs.starry[key];
+    const cell = content
+      ? `<td>${content}</td>`
+      : `<td class="cs-stub">Coming soon.</td>`;
+    return `
+      <tr>
+        <th><span class="starry-letter">${LABELS[i][0]}</span>${LABELS[i].slice(1)}</th>
+        ${cell}
+      </tr>`;
+  }).join('');
+
+  document.getElementById('cs-container').innerHTML = `
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-eyebrow">Case Study</div>
+        <div class="cs-name">${cs.name}</div>
+        <div class="cs-tagline">${cs.tagline}</div>
+        <div class="cs-meta">${metaTags}</div>
+      </div>
+      <table>${rows}</table>
+    </div>
+    <div class="cs-nav">
+      <a href="./CStemplate.html?id=${prevId}">&larr; Prev</a>
+      <a href="./index.html">Gallery</a>
+      <a href="./CStemplate.html?id=${nextId}">Next &rarr;</a>
+    </div>
+  `;
+}
+
+function renderError(msg) {
+  document.getElementById('cs-container').innerHTML = `
+    <div class="cs-card">
+      <p style="color:#9ca3af;font-style:italic;">${msg}</p>
+      <div class="cs-nav"><a href="./index.html">Back to Gallery</a></div>
+    </div>`;
+}
+
+boot();
+</script>
+</body>
+</html>

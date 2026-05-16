@@ -1,0 +1,16 @@
+{
+  "id": "CS09",
+  "name": "DISPATCH",
+  "tagline": "Multi-language, multi-site help desk transformation across APAC",
+  "location": ["APAC", "Japan"],
+  "industry": ["Insurance"],
+  "discipline": ["Automation", "Platform", "Observability"],
+  "starry": {
+    "situation": "A top-tier insurance company operated across 23 APAC locations. Language gaps between business users and SMEs, plus inconsistent intake, drove slow response: tickets typically waited 25-40 minutes before reaching the right team.",
+    "task": "Establish a standardized catch-and-dispatch front door, leveraging monitoring and ticketing systems to capture issues in the user's language, triage quickly, and route to the correct SMEs in minutes with clear ownership and auditable handoffs.",
+    "action": "Designed a language-aware intake layer integrated with existing monitoring and ticketing platforms. Implemented automated triage rules and routing logic based on issue type, severity, and location. Built audit trails and handoff notifications to ensure accountability across the 23-site estate.",
+    "result": "Ticket routing time reduced from 25-40 minutes to under 3 minutes. Handoff accuracy improved significantly. Escalations and misroutes dropped measurably across the network.",
+    "return": "Material operations savings from faster restoration times and lower triage toil. Estimated impact of $2.362M USD.",
+    "yield": "The catch-and-dispatch layer transformed incident handling from reactive queue-watching to proactive service delivery. Standardization, language-aware intake, and automated routing created a repeatable operating model that scales with geography and demand."
+  }
+}

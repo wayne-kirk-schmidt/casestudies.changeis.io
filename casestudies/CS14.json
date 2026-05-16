@@ -1,0 +1,16 @@
+{
+  "id": "CS14",
+  "name": "TRACE",
+  "tagline": "AI agent assisted post mortem process reducing time from weeks to hours",
+  "location": ["Regional"],
+  "industry": ["Financial"],
+  "discipline": ["AI Agent", "Automation", "Platform"],
+  "starry": {
+    "situation": "",
+    "task": "",
+    "action": "",
+    "result": "",
+    "return": "",
+    "yield": ""
+  }
+}

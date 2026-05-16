@@ -1,0 +1,16 @@
+{
+  "id": "CS04",
+  "name": "BEACON",
+  "tagline": "ML-driven compromise detection reducing identification time by 97%",
+  "location": ["EU", "Japan", "US"],
+  "industry": ["Security"],
+  "discipline": ["Security", "ML/AI", "Automation"],
+  "starry": {
+    "situation": "",
+    "task": "",
+    "action": "",
+    "result": "",
+    "return": "",
+    "yield": ""
+  }
+}

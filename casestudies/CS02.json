@@ -1,0 +1,16 @@
+{
+  "id": "CS02",
+  "name": "COMPASS",
+  "tagline": "Cloud vision, impact, and roadmap. Delivered in weeks, not months.",
+  "location": ["EU"],
+  "industry": ["Monitoring"],
+  "discipline": ["Platform", "Infrastructure", "DevOps", "CI/CD"],
+  "starry": {
+    "situation": "",
+    "task": "",
+    "action": "",
+    "result": "",
+    "return": "",
+    "yield": ""
+  }
+}

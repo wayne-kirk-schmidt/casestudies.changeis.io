@@ -1,0 +1,16 @@
+{
+  "id": "CS10",
+  "name": "LEDGER",
+  "tagline": "ML-driven asset discovery for top tier insurance firm",
+  "location": ["APAC", "Japan"],
+  "industry": ["Insurance"],
+  "discipline": ["ML/AI", "Automation", "Compliance", "Infrastructure"],
+  "starry": {
+    "situation": "A top-tier insurance company struggled to manage its $69M technology fleet. Manual plant surveys took 7-9 weeks and delivered inconsistent results — approximately 75% accuracy — delaying support and weakening compliance and license governance.",
+    "task": "Replace manual surveys with an automated, ML-based spidering inventory engine that continuously discovers, validates, and reports on assets with high confidence at enterprise scale.",
+    "action": "Designed and deployed an ML-driven asset discovery platform that continuously crawled the environment, validated findings against authoritative sources, and reconciled discrepancies automatically. Built reporting dashboards for compliance, license management, and capacity planning teams.",
+    "result": "Asset inventory accuracy improved to 99.9%. Survey cycle reduced from 7-9 weeks to near real-time. Reporting lag reduced by 99.93%.",
+    "return": "Significant reduction in compliance risk and license overspend. Operational savings from eliminating manual survey cycles across a $69M fleet.",
+    "yield": "Transformed asset management from a reactive, manual burden into a real-time strategic capability — strengthening compliance, reducing operational risk, and demonstrating the tangible value of automation and ML in IT operations."
+  }
+}

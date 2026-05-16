@@ -1,0 +1,16 @@
+{
+  "id": "CS05",
+  "name": "SPARROW",
+  "tagline": "Fintech CI/CD built for speed, coverage, and confidence",
+  "location": ["Japan"],
+  "industry": ["Fintech"],
+  "discipline": ["CI/CD", "DevOps", "Automation", "Platform"],
+  "starry": {
+    "situation": "A mid-sized fintech company was experiencing bottlenecks in their CI/CD pipeline. Build times exceeded 45 minutes, delaying releases and frustrating engineers.",
+    "task": "The goal was to streamline the CI/CD process to achieve sub-15-minute builds, improve test coverage, and increase deployment confidence.",
+    "action": "We implemented a containerized build system using Docker and introduced parallelized test execution. Pipeline stages were restructured to eliminate sequential bottlenecks, and caching strategies were applied across dependencies and artifacts.",
+    "result": "Build times dropped to an average of 11 minutes. Test coverage increased and deployment failures decreased significantly.",
+    "return": "The team recouped over 55 engineering hours per week, enabling more focus on feature development.",
+    "yield": "This engagement demonstrated how tactical DevOps enhancements can yield rapid, measurable returns — and how CI/CD maturity directly accelerates business velocity."
+  }
+}

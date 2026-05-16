@@ -1,0 +1,16 @@
+{
+  "id": "CS15",
+  "name": "MAESTRO",
+  "tagline": "ML driven testing orchestration cutting multi day cycles to hours",
+  "location": ["Global"],
+  "industry": ["Financial"],
+  "discipline": ["ML/AI", "Automation", "CI/CD", "Platform"],
+  "starry": {
+    "situation": "",
+    "task": "",
+    "action": "",
+    "result": "",
+    "return": "",
+    "yield": ""
+  }
+}
