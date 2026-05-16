@@ -82,6 +82,17 @@ header {
 .starry-letters { font-weight: 700; letter-spacing: 2px; color: rgba(255,255,255,0.85); }
 .starry-link:hover .starry-letters { color: var(--white); }
 
+/* ── CONTENT WIDTH ── */
+.filter-strip, main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
 /* ── FILTER STRIP ── */
 .filter-strip { padding: 0.75rem 2rem 1rem; }
 .filter-strip-inner {
