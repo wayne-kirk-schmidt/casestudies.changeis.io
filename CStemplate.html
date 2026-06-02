@@ -8,8 +8,29 @@
 </head>
 <body>
 
-<div class="cs-container" id="cs-container">
-  <div class="loading">Loading case study...</div>
+<nav>
+  <a class="nav-logo" href="https://changeis.io">ChangeIS</a>
+  <ul class="nav-links">
+    <li><a href="https://changeis.io/#domains">Domains</a></li>
+    <li><a href="https://changeis.io/#approach">Approach</a></li>
+    <li><a href="./index.html">Case Studies</a></li>
+    <li><a href="https://changeis.io/#contact">Engage</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="cs-container" id="cs-container">
+    <div class="loading">Loading case study...</div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a class="footer-link" href="https://www.waynekirkschmidt.me">Wayne Kirk Schmidt</a>
+      <a class="footer-link" href="https://changeis.io">ChangeIS</a>
+      <a class="footer-link" href="https://changeis.io/#contact">Engage</a>
+    </div>
+    <div class="footer-copy">ChangeIS &copy; 2026 &middot; Boston &middot; Tokyo &middot; Global</div>
+  </footer>
 </div>
 
 <script>
@@ -21,7 +42,6 @@ async function boot() {
   const id = params.get('id');
   if (!id) { renderError('No case study ID specified.'); return; }
 
-  // Load manifest to know prev/next
   const [cs, manifest] = await Promise.all([
     fetch(`./casestudies/${id}.json`).then(r => r.json()),
     fetch('./manifest.json').then(r => r.json())
@@ -73,7 +93,7 @@ function renderCase(cs, prevId, nextId) {
 function renderError(msg) {
   document.getElementById('cs-container').innerHTML = `
     <div class="cs-card">
-      <p style="color:#9ca3af;font-style:italic;">${msg}</p>
+      <p style="color:var(--light);font-style:italic;">${msg}</p>
       <div class="cs-nav"><a href="./index.html">Back to Gallery</a></div>
     </div>`;
 }
