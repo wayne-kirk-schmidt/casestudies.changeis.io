@@ -96,14 +96,7 @@ nav {
   margin: 0 auto;
 }
 
-.page-eyebrow {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--steel);
-  margin-bottom: 0.5rem;
-}
+.page-eyebrow { display: none; }
 
 .page-title {
   font-family: var(--serif);
@@ -144,33 +137,46 @@ nav {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(184, 212, 238, 0.15);
   border-radius: 12px;
-  padding: 1rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   overflow: hidden;
 }
 
-.filter-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
+/* ── FILTER TABLE ── */
+.filter-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.filter-label { display: none; }
+.filter-table td {
+  padding: 0.65rem 1.25rem;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(184, 212, 238, 0.08);
+}
+
+.filter-table tr:last-of-type td {
+  border-bottom: none;
+}
+
+.filter-table .filter-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--steel);
+  white-space: nowrap;
+  width: 110px;
+  padding-right: 0.5rem;
+  border-right: 1px solid rgba(184, 212, 238, 0.1);
+}
+
+.filter-table .filter-chips {
+  padding-left: 1rem;
+}
 
 .chips {
   display: flex;
   gap: 8px;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  min-width: 0;
-  flex: 1;
+  flex-wrap: wrap;
 }
-.chips::-webkit-scrollbar { display: none; }
 
 .chip {
   background: var(--frost2);
@@ -185,7 +191,6 @@ nav {
   font-family: var(--sans);
   letter-spacing: 0.02em;
   white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .chip:hover {
@@ -199,20 +204,24 @@ nav {
   color: var(--sky);
 }
 
-.filter-actions { display: flex; justify-content: flex-end; padding-top: 2px; }
+.filter-clear-row td {
+  text-align: center;
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid rgba(184, 212, 238, 0.08);
+}
 
 .clear-btn {
   background: none;
   border: 1px solid rgba(184, 212, 238, 0.2);
   color: var(--muted);
-  padding: 5px 14px;
+  padding: 6px 20px;
   border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 600;
   cursor: pointer;
   font-family: var(--sans);
   transition: all 0.15s;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 

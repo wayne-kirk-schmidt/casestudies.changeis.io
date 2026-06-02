@@ -22,28 +22,31 @@
 <div class="page-wrap">
 
   <div class="page-header">
-    <div class="page-eyebrow">ChangeIS · Project Delivery</div>
     <h1 class="page-title">Case Studies</h1>
     <p class="page-sub">Fifteen documented engagements. Each following the <a href="./explainer.html" style="color:var(--sky);text-decoration:none;">S·T·A·R·R·Y</a> framework.</p>
   </div>
 
   <div class="filter-strip">
     <div class="filter-strip-inner">
-      <div class="filter-row">
-        <span class="filter-label">Location</span>
-        <div class="chips" id="chips-location"></div>
-      </div>
-      <div class="filter-row">
-        <span class="filter-label">Industry</span>
-        <div class="chips" id="chips-industry"></div>
-      </div>
-      <div class="filter-row">
-        <span class="filter-label">Discipline</span>
-        <div class="chips" id="chips-discipline"></div>
-      </div>
-      <div class="filter-actions">
-        <button class="clear-btn" id="clearBtn">Clear filters</button>
-      </div>
+      <table class="filter-table">
+        <tbody>
+          <tr>
+            <td class="filter-label">Location</td>
+            <td class="filter-chips"><div class="chips" id="chips-location"></div></td>
+          </tr>
+          <tr>
+            <td class="filter-label">Industry</td>
+            <td class="filter-chips"><div class="chips" id="chips-industry"></div></td>
+          </tr>
+          <tr>
+            <td class="filter-label">Discipline</td>
+            <td class="filter-chips"><div class="chips" id="chips-discipline"></div></td>
+          </tr>
+          <tr class="filter-clear-row">
+            <td colspan="2"><button class="clear-btn" id="clearBtn">Clear filters</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
