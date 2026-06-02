@@ -148,13 +148,14 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow: hidden;
 }
 
 .filter-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  overflow: hidden;
+  min-width: 0;
 }
 
 .filter-label {
@@ -163,6 +164,7 @@ nav {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--steel);
+  width: 90px;
   min-width: 90px;
   flex-shrink: 0;
 }
@@ -174,7 +176,8 @@ nav {
   flex-wrap: nowrap;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 2px;
+  min-width: 0;
+  flex: 1;
 }
 .chips::-webkit-scrollbar { display: none; }
 
@@ -190,6 +193,8 @@ nav {
   transition: all 0.15s;
   font-family: var(--sans);
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .chip:hover {
@@ -341,9 +346,9 @@ main { padding-top: 0.75rem; padding-bottom: 1.5rem; }
   border-left: 12px solid var(--white);
 }
 
-.carousel-btn:hover { background: rgba(46, 123, 196, 0.3); border-color: var(--steel); }
-.carousel-btn:disabled { opacity: 0.25; cursor: default; }
-.carousel-btn:disabled::after { border-right-color: var(--muted); border-left-color: var(--muted); }
+.carousel-btn:hover:not(:disabled) { background: rgba(46, 123, 196, 0.3); border-color: var(--steel); }
+.carousel-btn:disabled { opacity: 0.45; cursor: default; }
+.carousel-btn:disabled::after { border-right-color: rgba(255,255,255,0.4); border-left-color: rgba(255,255,255,0.4); }
 
 .carousel-info {
   font-size: 0.82rem;
