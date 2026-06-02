@@ -158,20 +158,11 @@ nav {
   min-width: 0;
 }
 
-.filter-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--steel);
-  width: 90px;
-  min-width: 90px;
-  flex-shrink: 0;
-}
+.filter-label { display: none; }
 
 .chips {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   overflow-x: auto;
   flex-wrap: nowrap;
   scrollbar-width: none;
@@ -184,10 +175,10 @@ nav {
 .chip {
   background: var(--frost2);
   color: var(--white);
-  padding: 5px 12px;
+  padding: 7px 16px;
   border-radius: 999px;
   border: 1px solid rgba(184, 212, 238, 0.2);
-  font-size: 0.8rem;
+  font-size: 0.97rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.15s;
