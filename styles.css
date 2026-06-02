@@ -63,13 +63,32 @@ nav {
   color: var(--white);
   text-decoration: none;
   letter-spacing: 0.02em;
+  flex-shrink: 0;
 }
 
 .nav-logo span { color: var(--sky); }
 
+.nav-center {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.04em;
+  text-align: center;
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.nav-center a {
+  color: var(--sky);
+  text-decoration: none;
+}
+
+.nav-center a:hover { text-decoration: underline; }
+
 .nav-links {
   display: flex; gap: 2.5rem;
   list-style: none;
+  flex-shrink: 0;
 }
 
 .nav-links a {
@@ -94,7 +113,24 @@ nav {
   padding: 3.5rem 3rem 1.5rem;
   max-width: 1100px;
   margin: 0 auto;
+  text-align: center;
 }
+
+.page-starry {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 0.6rem;
+}
+
+.page-starry a {
+  color: var(--sky);
+  text-decoration: none;
+}
+
+.page-starry a:hover { text-decoration: underline; }
 
 .page-eyebrow { display: none; }
 
@@ -105,17 +141,6 @@ nav {
   color: var(--white);
   line-height: 1.15;
   letter-spacing: -0.01em;
-}
-
-.page-title em {
-  font-style: italic;
-  color: var(--sky);
-}
-
-.page-sub {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.55);
-  margin-top: 0.5rem;
 }
 
 /* ── CONTENT WIDTH ── */
@@ -130,7 +155,7 @@ nav {
 }
 
 /* ── FILTER STRIP ── */
-.filter-strip { padding-top: 0.5rem; padding-bottom: 1rem; }
+.filter-strip { padding-top: 2rem; padding-bottom: 1rem; }
 
 .filter-strip-inner {
   background: rgba(10, 22, 40, 0.72);
