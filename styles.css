@@ -34,7 +34,9 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--sans);
   background-color: #0A1628;
-  background-image: url('./background.png');
+  background-image: url('./background.webp');
+  background-image: -webkit-image-set(url('./background.webp') 1x);
+  background-image: image-set(url('./background.webp') 1x, url('./background.png') 1x);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;

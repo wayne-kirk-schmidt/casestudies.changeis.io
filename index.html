@@ -22,9 +22,6 @@
 
 <div class="page-wrap">
 
-
-
-
   <div class="filter-strip">
     <div class="filter-strip-inner">
       <table class="filter-table">
@@ -78,9 +75,8 @@ let page = 0;
 let activeFilters = { location: new Set(), industry: new Set(), discipline: new Set() };
 
 async function boot() {
-  const res = await fetch('./manifest.json');
-  const ids = await res.json();
-  allCases = await Promise.all(ids.map(id => fetch(`./casestudies/${id}.json`).then(r => r.json())));
+  // Single fetch replaces manifest.json + 15 individual CS fetches
+  allCases = await fetch('./casestudies.json').then(r => r.json());
   buildFilters();
   applyFilters();
 }

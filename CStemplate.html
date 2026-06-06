@@ -38,21 +38,20 @@ const STARRY = ['situation','task','action','result','return','yield'];
 const LABELS  = ['Situation','Task','Action','Result','Return','Yield'];
 
 async function boot() {
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');
+  const id = new URLSearchParams(window.location.search).get('id');
   if (!id) { renderError('No case study ID specified.'); return; }
 
-  const [cs, manifest] = await Promise.all([
-    fetch(`./casestudies/${id}.json`).then(r => r.json()),
-    fetch('./manifest.json').then(r => r.json())
-  ]);
+  // Single fetch for all cases — same file index.html already cached
+  const allCases = await fetch('./casestudies.json').then(r => r.json());
+  const idx = allCases.findIndex(c => c.id === id);
+
+  if (idx === -1) { renderError(`Case study "${id}" not found.`); return; }
+
+  const cs     = allCases[idx];
+  const prevId = allCases[idx > 0 ? idx - 1 : allCases.length - 1].id;
+  const nextId = allCases[idx < allCases.length - 1 ? idx + 1 : 0].id;
 
   document.title = `${cs.name} · ChangeIS Case Study`;
-
-  const idx = manifest.indexOf(id);
-  const prevId = idx > 0 ? manifest[idx - 1] : manifest[manifest.length - 1];
-  const nextId = idx < manifest.length - 1 ? manifest[idx + 1] : manifest[0];
-
   renderCase(cs, prevId, nextId);
 }
 
